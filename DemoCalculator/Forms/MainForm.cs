@@ -7,7 +7,7 @@ using Seachem;
 
 #endregion
 
-namespace DemoCalculator
+namespace DemoCalculator.Forms
 {
     public partial class MainForm : Form
     {

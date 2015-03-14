@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 #endregion
 
-namespace DemoCalculator
+namespace DemoCalculator.Controls
 {
     internal class NumericUpDownExtended : NumericUpDown
     {

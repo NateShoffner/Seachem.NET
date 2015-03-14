@@ -8,7 +8,7 @@ using Seachem;
 
 #endregion
 
-namespace DemoCalculator
+namespace DemoCalculator.Controls
 {
     public partial class ProductControl : UserControl
     {

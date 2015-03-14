@@ -1,4 +1,6 @@
-﻿namespace DemoCalculator
+﻿using DemoCalculator.Controls;
+
+namespace DemoCalculator.Forms
 {
     partial class MainForm
     {
@@ -32,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listTypes = new System.Windows.Forms.ComboBox();
-            this.productControl1 = new DemoCalculator.ProductControl();
+            this.productControl1 = new ProductControl();
             this.SuspendLayout();
             // 
             // listProducts

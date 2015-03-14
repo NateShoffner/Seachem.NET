@@ -1,4 +1,4 @@
-﻿namespace DemoCalculator
+﻿namespace DemoCalculator.Controls
 {
     partial class ProductControl
     {

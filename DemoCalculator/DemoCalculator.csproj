@@ -41,27 +41,27 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NumericUpDownExtended.cs">
+    <Compile Include="Controls\NumericUpDownExtended.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ProductControl.cs">
+    <Compile Include="Controls\ProductControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProductControl.Designer.cs">
+    <Compile Include="Controls\ProductControl.Designer.cs">
       <DependentUpon>ProductControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductControl.resx">
+    <EmbeddedResource Include="Controls\ProductControl.resx">
       <DependentUpon>ProductControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -84,6 +84,7 @@
   <ItemGroup>
     <Content Include="dropper.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
