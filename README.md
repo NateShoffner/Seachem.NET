@@ -1,6 +1,6 @@
 # Seachem.NET
 
-Mono-compatbile C# library for calculating dosage requirements for [Seachem](http://seachem.com) products.
+Mono-compatible C# library for calculating dosage requirements for [Seachem](http://seachem.com) products.
 
 Note: This is not licensed nor endorsed by Seachem Laboratories, Inc.
 
