@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Seachem.Products.Gravel;
 using Seachem.Products.Planted;
 using Seachem.Products.Reef;
@@ -10,7 +11,7 @@ using Seachem.Products.Reef;
 
 namespace Seachem
 {
-    public class Seachem
+    public static class Seachem
     {
         /// <summary>
         ///     Get all Seachem products.
@@ -81,6 +82,12 @@ namespace Seachem
             }
 
             return new ISeachemProduct[] {};
+        }
+
+        public static SeachemProductType[] GetProductTypes()
+        {
+            var types = Enum.GetValues(typeof (SeachemProductType));
+            return types.OfType<SeachemProductType>().Select(o => o).ToArray();;
         }
     }
 }

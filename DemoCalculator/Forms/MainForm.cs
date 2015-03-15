@@ -23,7 +23,7 @@ namespace DemoCalculator.Forms
 
         private void PopulateTypes()
         {
-            foreach (SeachemProductType type in Enum.GetValues(typeof (SeachemProductType)))
+            foreach (var type in Seachem.Seachem.GetProductTypes())
             {
                 listTypes.Items.Add(type.ToString());
             }
