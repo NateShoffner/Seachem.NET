@@ -39,7 +39,7 @@ namespace Seachem.Products.Planted
             var desired = Parameters[2].Value;
 
             var doseB = volume/20*((desired - current)*(decimal) 16.600000);
-            var doseA = doseB/5;
+            var doseA = doseB/Constants.CapmL;
             doseA = Math.Round(doseA*10)/10;
             doseB = Math.Round(doseB*10)/10;
 

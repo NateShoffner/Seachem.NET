@@ -30,9 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Products\Reef\ReefAdvantageCalcium.cs" />
     <Compile Include="Products\Reef\ReefAdvantageMagnesium.cs" />
     <Compile Include="Products\Reef\ReefAdvantageStrontium.cs" />

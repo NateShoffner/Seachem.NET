@@ -87,7 +87,7 @@ namespace Seachem
         public static SeachemProductType[] GetProductTypes()
         {
             var types = Enum.GetValues(typeof (SeachemProductType));
-            return types.OfType<SeachemProductType>().Select(o => o).ToArray();;
+            return types.OfType<SeachemProductType>().Select(o => o).ToArray();
         }
     }
 }

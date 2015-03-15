@@ -38,7 +38,7 @@ namespace Seachem.Products.Reef
             var desired = Parameters[2].Value;
 
             var doseB = (decimal) 0.500000*volume*(desired - current);
-            var doseA = doseB/5;
+            var doseA = doseB/Constants.CapmL;
             doseA = Math.Round(doseA*10)/10;
             doseB = Math.Round(doseB*10)/10;
 
