@@ -14,8 +14,8 @@ namespace Seachem.Products.Planted
             Parameters = new List<SeachemParameter>
             {
                 new SeachemParameter("Aquarium Volume", "US Gallons"),
-                new SeachemParameter("Current Potassium", "meq/L"),
-                new SeachemParameter("Desired Potassium", "meq/L")
+                new SeachemParameter("Current Nitrogen", "meq/L"),
+                new SeachemParameter("Desired Nitrogen", "meq/L")
             }.ToArray();
 
             Comment = "Considerations: If using a \"nitrate equivalent\" value for Current and Desired Nitrogen levels, divide the result by 5.";
