@@ -92,7 +92,7 @@ namespace DemoCalculator.Controls
                 controls.Add(new TextBox
                 {
                     ReadOnly = true,
-                    Text = dosage.Amount.ToString()
+                    Text = dosage.Value.ToString()
                 });
 
                 controls.Add(new Label
@@ -146,7 +146,7 @@ namespace DemoCalculator.Controls
                 //params + calc button + index
                 var rowIndex = parameters.Length + 1 + i;
                 var txtBox = (TextBox) tableLayoutPanel1.GetControlFromPosition(1, rowIndex);
-                txtBox.Text = dosage.Amount.ToString();
+                txtBox.Text = dosage.Value.ToString();
             }
         }
     }

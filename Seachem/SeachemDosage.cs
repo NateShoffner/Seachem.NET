@@ -5,10 +5,10 @@ namespace Seachem
     /// </summary>
     public class SeachemDosage
     {
-        public SeachemDosage(string unit, decimal amount)
+        public SeachemDosage(string unit, decimal value)
         {
             Unit = unit;
-            Amount = amount;
+            Value = value;
         }
 
         /// <summary>
@@ -19,6 +19,6 @@ namespace Seachem
         /// <summary>
         ///     The dosage amount.
         /// </summary>
-        public decimal Amount { get; private set; }
+        public decimal Value { get; private set; }
     }
 }
