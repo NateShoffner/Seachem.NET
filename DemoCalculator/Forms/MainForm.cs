@@ -18,7 +18,6 @@ namespace DemoCalculator.Forms
             InitializeComponent();
             Icon = System.Drawing.Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location);
             PopulateTypes();
-            PopulateProducts();
         }
 
         private void PopulateTypes()
@@ -33,7 +32,7 @@ namespace DemoCalculator.Forms
 
         private void PopulateProducts()
         {
-            var type = (SeachemProductType) listTypes.SelectedIndex;
+            var type = (SeachemProductType)Enum.Parse(typeof(SeachemProductType), listTypes.Text);
             _products = Seachem.Seachem.GetProducts(type);
 
             listProducts.Items.Clear();

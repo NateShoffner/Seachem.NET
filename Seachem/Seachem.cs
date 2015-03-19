@@ -19,14 +19,10 @@ namespace Seachem
         /// <returns>Returns an array of products.</returns>
         public static ISeachemProduct[] GetProducts()
         {
-            var products = new List<ISeachemProduct>();
+            var flags = Enum.GetValues(typeof (SeachemProductType)).Cast<SeachemProductType>().
+                Aggregate((SeachemProductType) 0, (current, type) => current | type);
 
-            foreach (SeachemProductType type in Enum.GetValues(typeof (SeachemProductType)))
-            {
-                products.AddRange(GetProducts(type));
-            }
-
-            return products.ToArray();
+            return GetProducts(flags);
         }
 
         /// <summary>
@@ -36,52 +32,59 @@ namespace Seachem
         /// <returns>Returns an array of products.</returns>
         public static ISeachemProduct[] GetProducts(SeachemProductType type)
         {
-            switch (type)
+            var products = new List<ISeachemProduct>();
+
+            if ((type & SeachemProductType.Gravel) == SeachemProductType.Gravel)
             {
-                case SeachemProductType.Gravel:
-                    return new ISeachemProduct[]
-                    {
-                        new Flourite(),
-                        new FlouriteRed(),
-                        new FlouriteDark(),
-                        new FlouriteBlack(),
-                        new FlouriteBlackSand(),
-                        new OnyxSand(),
-                        new Onyx(),
-                        new GrayCoast(),
-                        new KonaCoast(),
-                        new Merdian(),
-                        new PearlBeach(),
-                        new SilverShores()
-                    };
-                case SeachemProductType.Planted:
-                    return new ISeachemProduct[]
-                    {
-                        new Equilibrium(),
-                        new Iron(),
-                        new Potassium(),
-                        new Nitrogen(),
-                        new Phosphorus(),
-                        new AlkalineBuffer(),
-                        new LiquidAlkalineBuffer()
-                    };
-                case SeachemProductType.Reef:
-                    return new ISeachemProduct[]
-                    {
-                        new ReefCalcium(),
-                        new ReefAdvantageCalcium(),
-                        new ReefComplete(),
-                        new ReefBuffer(),
-                        new ReefBuilder(),
-                        new ReefCarbonate(),
-                        new ReefIodide(),
-                        new ReefStrontium(),
-                        new ReefAdvantageStrontium(),
-                        new ReefAdvantageMagnesium()
-                    };
+                products.AddRange(new ISeachemProduct[]
+                {
+                    new Flourite(),
+                    new FlouriteRed(),
+                    new FlouriteDark(),
+                    new FlouriteBlack(),
+                    new FlouriteBlackSand(),
+                    new OnyxSand(),
+                    new Onyx(),
+                    new GrayCoast(),
+                    new KonaCoast(),
+                    new Merdian(),
+                    new PearlBeach(),
+                    new SilverShores()
+                });
             }
 
-            return new ISeachemProduct[] {};
+            if ((type & SeachemProductType.Planted) == SeachemProductType.Planted)
+            {
+                products.AddRange(new ISeachemProduct[]
+                {
+                    new Equilibrium(),
+                    new Iron(),
+                    new Potassium(),
+                    new Nitrogen(),
+                    new Phosphorus(),
+                    new AlkalineBuffer(),
+                    new LiquidAlkalineBuffer()
+                });
+            }
+
+            if ((type & SeachemProductType.Reef) == SeachemProductType.Reef)
+            {
+                products.AddRange(new ISeachemProduct[]
+                {
+                    new ReefCalcium(),
+                    new ReefAdvantageCalcium(),
+                    new ReefComplete(),
+                    new ReefBuffer(),
+                    new ReefBuilder(),
+                    new ReefCarbonate(),
+                    new ReefIodide(),
+                    new ReefStrontium(),
+                    new ReefAdvantageStrontium(),
+                    new ReefAdvantageMagnesium()
+                });
+            }
+
+            return products.ToArray();
         }
 
         public static SeachemProductType[] GetProductTypes()
