@@ -32,7 +32,7 @@ namespace DemoCalculator.Forms
 
         private void PopulateProducts()
         {
-            var type = (SeachemProductType)Enum.Parse(typeof(SeachemProductType), listTypes.Text);
+            var type = (SeachemProductType) Enum.Parse(typeof (SeachemProductType), listTypes.Text);
             _products = Seachem.Seachem.GetProducts(type);
 
             listProducts.Items.Clear();
