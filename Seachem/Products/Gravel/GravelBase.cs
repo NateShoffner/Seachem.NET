@@ -1,5 +1,6 @@
 ﻿#region
 
+using System;
 using System.Collections.Generic;
 
 #endregion
@@ -22,5 +23,19 @@ namespace Seachem.Products.Gravel
 
         public string Comment { get; private set; }
         public SeachemParameter[] Parameters { get; private set; }
+
+        protected SeachemDosage[] CalculateDosage(decimal size)
+        {
+            var width = Parameters[0].Value;
+            var length = Parameters[0].Value;
+            var depth = Parameters[0].Value;
+
+            var total = Math.Ceiling(width*length*depth/size);
+
+            return new List<SeachemDosage>
+            {
+                new SeachemDosage("Bags", total)
+            }.ToArray();
+        }
     }
 }
