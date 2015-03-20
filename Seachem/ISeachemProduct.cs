@@ -18,7 +18,7 @@
         string Comment { get; }
 
         /// <summary>
-        ///     Calculate dosage requirements.
+        ///     Calculate requirements based off of designated parameters.
         /// </summary>
         /// <returns>Returns an array of dosages.</returns>
         SeachemDosage[] Calculate();
