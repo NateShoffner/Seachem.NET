@@ -9,9 +9,9 @@ namespace Seachem.Products.Gravel
             get { return "Silver Shores"; }
         }
 
-        public SeachemDosage[] CalculateDosage()
+        public SeachemDosage[] Calculate()
         {
-            return CalculateDosage(458);
+            return Calculate(458);
         }
 
         #endregion

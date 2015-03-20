@@ -9,9 +9,9 @@ namespace Seachem.Products.Gravel
             get { return "Kona Coast"; }
         }
 
-        public SeachemDosage[] CalculateDosage()
+        public SeachemDosage[] Calculate()
         {
-            return CalculateDosage(366);
+            return Calculate(366);
         }
 
         #endregion

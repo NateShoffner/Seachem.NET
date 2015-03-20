@@ -9,9 +9,9 @@ namespace Seachem.Products.Gravel
             get { return "Pearl Beach"; }
         }
 
-        public SeachemDosage[] CalculateDosage()
+        public SeachemDosage[] Calculate()
         {
-            return CalculateDosage(525);
+            return Calculate(525);
         }
 
         #endregion

@@ -21,6 +21,6 @@
         ///     Calculate dosage requirements.
         /// </summary>
         /// <returns>Returns an array of dosages.</returns>
-        SeachemDosage[] CalculateDosage();
+        SeachemDosage[] Calculate();
     }
 }

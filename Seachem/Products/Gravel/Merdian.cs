@@ -9,9 +9,9 @@ namespace Seachem.Products.Gravel
             get { return "Merdian"; }
         }
 
-        public SeachemDosage[] CalculateDosage()
+        public SeachemDosage[] Calculate()
         {
-            return CalculateDosage(320);
+            return Calculate(320);
         }
 
         #endregion

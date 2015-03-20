@@ -32,7 +32,7 @@ namespace Seachem.Products.Planted
 
         public string Comment { get; private set; }
 
-        public SeachemDosage[] CalculateDosage()
+        public SeachemDosage[] Calculate()
         {
             var volume = Parameters[0].Value;
             var current = Parameters[1].Value;

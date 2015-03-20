@@ -9,9 +9,9 @@ namespace Seachem.Products.Gravel
             get { return "Onyx"; }
         }
 
-        public SeachemDosage[] CalculateDosage()
+        public SeachemDosage[] Calculate()
         {
-            return CalculateDosage(425);
+            return Calculate(425);
         }
 
         #endregion

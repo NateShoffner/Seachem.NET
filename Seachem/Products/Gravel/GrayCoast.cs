@@ -9,9 +9,9 @@ namespace Seachem.Products.Gravel
             get { return "Gray Coast"; }
         }
 
-        public SeachemDosage[] CalculateDosage()
+        public SeachemDosage[] Calculate()
         {
-            return CalculateDosage(260);
+            return Calculate(260);
         }
 
         #endregion

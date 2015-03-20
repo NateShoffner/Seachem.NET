@@ -71,7 +71,7 @@ namespace DemoCalculator.Controls
             AddRow(_calcButton);
 
             //populate dosage controls
-            var dosages = _product.CalculateDosage();
+            var dosages = _product.Calculate();
 
             for (var i = 0; i < dosages.Length; i++)
             {
@@ -87,7 +87,7 @@ namespace DemoCalculator.Controls
                     });
                 }
 
-                var dosage = _product.CalculateDosage()[i];
+                var dosage = _product.Calculate()[i];
 
                 controls.Add(new TextBox
                 {
@@ -138,7 +138,7 @@ namespace DemoCalculator.Controls
                 param.Value = input.Value;
             }
 
-            var dosages = _product.CalculateDosage();
+            var dosages = _product.Calculate();
 
             for (var i = 0; i < dosages.Length; i++)
             {

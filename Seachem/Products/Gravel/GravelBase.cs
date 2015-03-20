@@ -24,7 +24,7 @@ namespace Seachem.Products.Gravel
         public string Comment { get; private set; }
         public SeachemParameter[] Parameters { get; private set; }
 
-        protected SeachemDosage[] CalculateDosage(decimal size)
+        protected SeachemDosage[] Calculate(decimal size)
         {
             var width = Parameters[0].Value;
             var length = Parameters[0].Value;
