@@ -27,8 +27,8 @@ namespace Seachem.Products.Gravel
         protected SeachemDosage[] Calculate(decimal size)
         {
             var width = Parameters[0].Value;
-            var length = Parameters[0].Value;
-            var depth = Parameters[0].Value;
+            var length = Parameters[1].Value;
+            var depth = Parameters[2].Value;
 
             var total = Math.Ceiling(width*length*depth/size);
 
