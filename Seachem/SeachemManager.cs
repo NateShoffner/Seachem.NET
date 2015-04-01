@@ -11,7 +11,7 @@ using Seachem.Products.Reef;
 
 namespace Seachem
 {
-    public static class Seachem
+    public static class SeachemManager
     {
         /// <summary>
         ///     Get all Seachem products.
