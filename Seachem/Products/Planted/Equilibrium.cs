@@ -45,7 +45,7 @@ namespace Seachem.Products.Planted
 
             return new List<SeachemDosage>
             {
-                new SeachemDosage("Tablespoons", doseA),
+                new SeachemDosage("Tbsp", doseA),
                 new SeachemDosage("Grams", doseB)
             }.ToArray();
         }

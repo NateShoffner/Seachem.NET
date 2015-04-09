@@ -45,7 +45,7 @@ namespace Seachem.Products.Reef
             return new List<SeachemDosage>()
             {
                 new SeachemDosage("Tspns", doseA),
-                new SeachemDosage("g", doseB)
+                new SeachemDosage("Grams, doseB)
             }.ToArray();
         }
 
